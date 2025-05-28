@@ -1,0 +1,25 @@
+[{
+    "titulo": "Automatización de procesos",
+    "descripcion": "Digitalizamos tareas repetitivas para que ahorres tiempo y reduzcas errores.",
+    "icono": "fi fi-rr-settings",
+    "imagen": "Images/automatizacion.jpg"
+},
+{
+  "titulo": "Diseño UX/UI",
+    "descripcion": "Interfaces atractivas y funcionales, pensadas para mejorar la experiencia del usuario.",
+    "icono": "fi fi-rr-customize-computer",
+    "imagen": "Images/diseño ux.jpg"  
+},
+{
+    "titulo": "Desarrollo web y apps",
+    "descripcion": "Creamos plataformas a medida, rápidas, seguras y escalables.",
+    "icono": "fi fi-rr-bulb",
+    "imagen": "Images/web.jpg"
+},
+{
+  "titulo": "Integración de herramientas",
+    "descripcion": "Conectamos tus plataformas (CRM, ERP, ecommerce) para que trabajen juntas.",
+    "icono": "fi fi-rr-plug-cable",
+    "imagen": "Images/integracion.jpg"  
+}
+]

@@ -1,0 +1,1111 @@
+#presentacion {
+    position: relative;
+    overflow: hidden;
+}
+
+#presentacion::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(44, 62, 80, 1), rgba(44, 62, 80, 0.3));
+    z-index: 1;
+}
+
+#presentacion img {
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#presentacion div {
+    position: absolute;
+    bottom: 10vh;
+    left: 5%;
+    right: 5%;
+    color: #F7F7F7;
+    max-width: 600px;
+    width: 100%;
+    z-index: 2;
+}
+
+#presentacion p {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    max-width: 100%;
+}
+
+#presentacion h1, #presentacion p{
+    color: #F7F7F7;
+}
+
+/*Body*/
+
+/*seccion sobre nosotros*/
+
+#nosotros-info {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    
+}
+
+.linea-solida {
+    width: 150px;
+    height: 1px;
+    color: #3498DB;
+    margin-bottom: 1rem;
+}
+
+#nosotros-info img{
+    flex: 1;
+    max-width: 50%;
+    height: fit-content;
+}
+
+#nosotros-info .contenido-textos{
+    max-width: 50%;
+    flex: 1;
+}
+
+.icono-texto{
+    margin-top: 12px;
+    display: grid;
+    gap: 12px;
+    grid-template-columns: auto 2fr;
+    grid-template-rows: auto 1fr;
+    align-content: center;
+    align-items:center
+}
+
+.icono-texto > span{
+    grid-column: 2/3;
+    font-size: 20px;
+    font-weight: 700;
+    color:#666666
+}
+
+.icono-texto i {
+    font-size: 32px;
+    width: fit-content;
+    color: #3498DB;
+    font-weight: 700;
+}
+
+.icono-texto p{
+    grid-column: 1/3;
+}
+
+strong{
+    color: #3498DB;
+}
+
+.contenedor-iconos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+/*Seccion de ofrecimientos*/
+
+.con-fondo *{
+    color: #fff;
+}
+
+strong{
+    color: #3498DB !important;
+}
+
+#ofrecimientos {
+    padding: 48px;
+    background-color: #2C3E50;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto auto;
+    column-gap: 32px;  
+    border-radius: 36px;
+}
+
+#ofrecimientos li {
+    list-style: none;
+}
+
+#ofrecimientos > .contenido-textos{
+    grid-column: span 2 / span 2;
+}
+
+#ofrecimientos > #servicios-lista{
+    grid-column: span 2 / span 2;
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+#ofrecimientos aside {
+    grid-column-start: 5;
+    grid-row-start: 1;
+    grid-row: span 2 / span 2;
+}
+
+#ofrecimientos #img-servicio {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 1;
+    width: 100%;
+    max-width: 70%;
+    height: auto;
+    border-radius: 16px;
+    justify-self: center;
+}
+
+#servicios-lista{
+    display: flex;
+    flex-direction: column;
+    gap: 16px
+}
+
+.servicio{
+    padding-left: 24px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: repeat(auto, 1fr);    
+    border-radius: 32px;
+    align-items: center;
+    border: 1.5px solid #3498DB;
+    gap: 16px;
+    position: relative;
+}
+
+.servicio > *{
+    display: flex;
+    font-size: 16px;
+}
+
+
+.servicio > i{
+    font-size: 20px;
+    color: #3498DB;
+}
+
+.servicio > i:first-child:hover{
+    color: #D35400;
+}
+
+.flecha{
+    padding: 16px 24px;    
+    display: flex;
+    font-size: 20px;
+    border-radius: 0 32px 32px 0;
+}
+
+.flecha:hover{
+    background-color: rgba(52, 152, 219, 0.1);
+
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#ofrecimientos > aside {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tarjeta-redireccion{
+    padding: 16px 24px;
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto;
+    column-gap  : 8px;
+    border: 1.5px solid #3498DB;
+    background-color: #3498DB10;
+}
+
+.tarjeta-redireccion p{
+    font-size: 12px;
+    grid-column: span 2 / span 2;
+    text-align: left;
+}
+
+#ofrecimientos > aside > .tarjeta-redireccion:last-child{
+    background-color: #3498DB;
+}
+
+#ofrecimientos > aside > .tarjeta-redireccion:last-child .btn-iconotexto:hover{
+    border-radius: 32px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+/*seccion de experiencias*/
+
+#contenedor-muestra-trabajo{
+    border: #2C3E50 1px solid;
+    border-radius: 16px;
+    padding: 8px;
+    display: grid;
+    grid-column: span 2 / span 2;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 16px;
+}
+
+#contenedor-muestra-trabajo *{
+    color: white;
+    list-style: none;
+
+}
+#contenedor-muestra-trabajo > div {
+    border-radius: 16px;
+    background-color: #2C3E50;
+}
+
+.icono-app{
+    align-self: center;
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#detalles{
+    padding: 16px 32px;
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+}
+
+.detalles-app {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    grid-column: span 3 / span 3;
+}
+
+.detalles-app p{
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+    width: fit-content;
+    font-size: 13px;
+    color: #3498DB !important;
+    border: #3498DB 1px solid;
+    border-radius: 32px;
+    padding: 8px 16px;
+
+}
+
+.titulo-app{
+    align-self: center;
+}
+
+.descripcion-app {
+    font-size: 12px;
+    grid-column: span 3 / span 3;
+    grid-row-start: 3;
+}
+
+#contenedor-muestra-trabajo > div:last-child > div{
+    border-radius: 16px;
+    padding: 16px 32px;
+    flex: 1;
+    background-color: #2C3E50;
+}
+
+#contenedor-muestra-trabajo > div:last-child{
+    background-color: #2C3E5000 !important;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.seccion-app{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.tecnologias-lista{
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tecnologia{
+    width: fit-content;
+    font-size: 13px;
+    border: #3498DB 1px solid;
+    border-radius: 32px;
+    font-size: 12px;
+    padding: 4px 8px;
+}
+
+.foto-miembro{
+    margin-top: 8px;
+    width: 10%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+#imagen-app{
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+}
+
+#clientes{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 32px;
+    padding: 32px;
+}
+
+#clientes .contenido-textos{
+    grid-column: span 2 / span 2;
+    text-align: left;
+}
+
+/*reseña clientes*/
+
+#reseña-cliente i{
+    font-size: 48px;
+    color: #D35400;
+}
+
+#reseña-cliente{
+    padding: 16px 32px;
+    border: 1px solid #2C3E50;
+    background-color: #F7F7F7;
+    border-radius: 16px;
+}
+
+#nombre-cliente{
+    font-weight: 700;
+    font-size: 16px;
+    color: #3498DB;
+}
+
+#cargo-cliente{
+    font-size: 14px;
+    color: #666666;
+}
+
+#fecha{
+    font-size: 12px;
+    color: #999999;
+}
+
+#reseña-cliente span{
+    display: block;
+}
+
+#clientes > div:last-child{
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    height: fit-content;
+}
+
+/*resultados proyecto*/
+
+#clientes > div:last-child button{
+    width: fit-content;
+}
+
+#resultados-proyecto{
+    flex: 1;
+    padding: 16px 32px;
+    border: #2C3E50 1px solid;
+    border-radius: 16px;
+    justify-items: center;
+    width: fit-content;
+}
+
+#resultados-proyecto li{
+    list-style: none;
+}
+
+#resultados-proyecto span{  
+    width: fit-content;
+    font-size: 16px;
+}
+
+#resultados-proyecto i{
+    color: #3498DB;  
+    font-size: 20px;
+    margin-inline-end: 16px;
+}
+
+/*incitacion a contactar*/
+
+#llamar-contactar{
+    padding: 0 64px;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#llamar-contactar > div{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+#llamar-contactar h2{
+    text-align: center;
+}
+
+#llamar-contactar button{
+    width: fit-content;
+}
+
+#llamar-contactar img{
+    width: 75%;
+    object-fit: cover;
+
+}
+
+/*formulario contacto*/
+
+#contacto {
+  font-family: 'Inter', sans-serif;
+}
+
+.contacto-contenedor {
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.contacto-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contacto-info h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+
+.contacto-links a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #00aaff;
+  margin-bottom: 12px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.social-iconos a {
+  display: inline-block;
+  color: #2C3E50;
+  margin-right: 12px;
+  font-size: 18px;
+}
+
+.social-iconos span{
+    display: block;
+}
+
+.contacto-form {
+  background-color: #2C3E50;
+  padding: 30px;
+  border-radius: 10px;
+  flex: 1.5;
+  min-width: 300px;
+}
+
+.form-grupo {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+  background-color: #374350;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 14px;
+  width: 100%;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+}
+
+.contacto-form textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.form-servicios {
+  margin: 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-servicios .label-servicios {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #fff;
+  font-size: 15px;
+}
+
+.form-servicios label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #F7F7F7;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.form-servicios input[type="checkbox"] {
+  accent-color: #D35400;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  margin: 0;
+  transform: scale(1.1);
+}
+
+.contacto-form button{
+    width: 100%;
+}
+
+
+/*responsive*/
+
+/*Celulares y dispositivos pequeños */
+@media (max-width: 600px) {
+    html, body {
+        margin: 0;
+        padding: 0;
+    }
+
+    #presentacion{
+        position: relative;
+        background-color: #3498DB;
+    }
+
+    #presentacion img {
+        width: 100%;
+        height: 100vw;
+        transition: opacity 0.5s ease-in-out;
+    }   
+
+    #presentacion div {
+    left: 0;
+    right: 0;
+    bottom: 5vh;
+    max-width: 100%;
+    justify-items: center;
+  }
+
+  #presentacion h1, #presentacion p{
+    text-align: center;
+  }
+
+  #nosotros-info {
+        flex-direction: column;
+    }
+
+    #nosotros-info img, #nosotros-info .contenido-textos{
+    max-width: 100%;    
+    }
+
+    .icono-texto > span{
+        font-size: 18px;
+    }
+
+    .contenido-textos{
+        justify-items: center;
+    }
+
+    .icono-texto i {
+    font-size: 28px;
+    }
+
+    #ofrecimientos aside{
+        display: none;
+    }
+
+    #ofrecimientos{
+        grid-template-rows: auto;
+        row-gap: 32px;
+    }
+
+    #ofrecimientos > .contenido-textos{
+    grid-column: span 5 / span 5;
+    grid-row-start: 1;
+    }
+
+    #ofrecimientos > #servicios-lista{
+    grid-column: span 5 / span 5;
+    grid-row-start: 2;
+    }
+
+    #ofrecimientos #img-servicio {
+    grid-column: span 5 / span 5;
+    grid-row-start: 3   ;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    justify-self: center;
+    }
+
+    #clientes{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 0;
+}
+    #contenedor-muestra-trabajo{
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    #imagen-app{
+    grid-column: span 4 / span 4;
+    }
+
+    #contenedor-muestra-trabajo > div:last-child{
+        flex-direction: column;
+    }
+
+    .servicio > *{
+        font-size: 12px;
+    }
+
+    .servicio > i{
+    font-size: 17px;
+    }
+
+    .tarjeta-redireccion p{
+    font-size: 11px;
+    }
+
+    .detalles-app p{
+        font-size: 12px;
+    }
+
+    .descripcion-app {
+        font-size: 11px;
+    }
+
+    .seccion-app{
+        font-size: 12px;
+    }
+
+    .tecnologia{
+        font-size: 11px;
+        padding: 3px 6px;
+    }
+
+   #llamar-contactar{
+    padding: 0 64px;
+    margin: 100px 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    }
+
+    .foto-miembro{
+    width: 15%;
+    }
+
+    #reseña-cliente i{
+        font-size: 36px;
+    }
+
+    #nombre-cliente{
+        font-size: 14px;
+    }
+
+    #cargo-cliente{
+        font-size: 14px;
+    }
+
+    #resultados-proyecto span{
+        font-size: 14px;
+    }
+    
+    #resultados-proyecto i{
+        font-size: 18px;
+    }
+
+    .contacto-info h2{
+        font-size: 24px;
+    }
+
+    .contacto-links a {
+        font-size: 12px;
+    }
+
+    .social-iconos a {
+        font-size: 16px;
+    }
+
+    .contacto-form input,
+    .contacto-form textarea {
+        font-size: 12px;
+    }
+
+    .form-servicios .label-servicios {
+        font-size: 13px;
+    }
+
+}
+
+/*Tablets en modo vertical */
+@media (min-width: 601px) and (max-width: 768px) {
+    
+    #nosotros-info {
+        flex-direction: column;
+    }
+
+    #nosotros-info img, #nosotros-info .contenido-textos{
+    max-width: 100%;    
+    }
+
+    .icono-texto > span{
+        font-size: 18px;
+    }
+
+    .icono-texto i {
+    font-size: 28px;
+    }
+
+    #ofrecimientos aside{
+        display: none;
+    }
+
+    #ofrecimientos > .contenido-textos{
+    grid-column: span 5 / span 5;
+    grid-row-start: 1;
+    }
+
+    #ofrecimientos > #servicios-lista{
+    grid-column: span 3 / span 3;
+    grid-row-start: 2;
+    }
+
+    #ofrecimientos #img-servicio {
+    grid-column: span 2 / span 2;
+    grid-row-start: 2;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    justify-self: center;
+    }
+
+    #contenedor-muestra-trabajo{
+    grid-column: span 2 / span 2;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    }
+
+    #contenedor-muestra-trabajo > div:last-child{
+    grid-column: span 2 / span 2;
+    flex-direction: row;
+    }
+
+    .servicio > *{
+        font-size: 12px;
+    }
+
+    .servicio > i{
+    font-size: 17px;
+    }
+
+    .tarjeta-redireccion p{
+    font-size: 11px;
+    }
+
+    .detalles-app p{
+        font-size: 12px;
+    }
+
+    .descripcion-app {
+        font-size: 11px;
+    }
+
+    .seccion-app{
+        font-size: 12px;
+    }
+
+    .tecnologia{
+        font-size: 11px;
+        padding: 3px 6px;
+    }
+
+    .foto-miembro{
+    width: 15%;
+    }
+
+    #reseña-cliente i{
+        font-size: 36px;
+    }
+
+    #nombre-cliente{
+        font-size: 14px;
+    }
+
+    #cargo-cliente{
+        font-size: 14px;
+    }
+
+    #resultados-proyecto span{
+        font-size: 14px;
+    }
+    
+    #resultados-proyecto i{
+        font-size: 18px;
+    }
+
+    .contacto-info h2{
+        font-size: 24px;
+    }
+
+    .contacto-links a {
+        font-size: 12px;
+    }
+
+    .social-iconos a {
+        font-size: 16px;
+    }
+
+    .contacto-form input,
+    .contacto-form textarea {
+        font-size: 12px;
+    }
+
+    .form-servicios .label-servicios {
+        font-size: 13px;
+    }
+
+
+}
+
+/*Tablets horizontales y laptops pequeñas */
+@media (min-width: 769px) and (max-width: 992px) {
+    #presentacion div{
+    bottom: 10vh; 
+    left: 5%;
+    max-width: 50%;
+    }
+
+    .icono-texto > span{
+        font-size: 18px;
+    }
+
+    .icono-texto i {
+    font-size: 28px;
+    }
+
+    .servicio > *{
+        font-size: 12px;
+    }
+
+    .servicio > i{
+    font-size: 17px;
+    }
+
+    .tarjeta-redireccion p{
+    font-size: 11px;
+    }
+
+    .detalles-app p{
+        font-size: 12px;
+    }
+
+    .descripcion-app {
+        font-size: 11px;
+    }
+
+    .seccion-app{
+        font-size: 12px;
+    }
+
+    .tecnologia{
+        font-size: 11px;
+        padding: 3px 6px;
+    }
+
+    .foto-miembro{
+    width: 15%;
+    }
+
+    #reseña-cliente i{
+        font-size: 36px;
+    }
+
+    #nombre-cliente{
+        font-size: 14px;
+    }
+
+    #cargo-cliente{
+        font-size: 14px;
+    }
+
+    #resultados-proyecto span{
+        font-size: 14px;
+    }
+    
+    #resultados-proyecto i{
+        font-size: 18px;
+    }
+
+    .contacto-info h2{
+        font-size: 24px;
+    }
+
+    .contacto-links a {
+        font-size: 12px;
+    }
+
+    .social-iconos a {
+        font-size: 16px;
+    }
+
+    .contacto-form input,
+    .contacto-form textarea {
+        font-size: 12px;
+    }
+
+    .form-servicios .label-servicios {
+        font-size: 13px;
+    }
+
+    /*otros elementos*/
+
+    #ofrecimientos #img-servicio {
+        align-self: center;
+        max-width: 90%;
+    }
+}
+
+/*Laptops y monitores estándar */
+@media (min-width: 993px) and (max-width: 1200px) {
+    #presentacion div{
+    bottom: 10vh; 
+    left: 5%;
+    max-width: 50%;
+    }
+
+    .icono-texto > span{
+        font-size: 18px;
+    }
+
+    .icono-texto i {
+    font-size: 28px;
+    }
+
+    .servicio > *{
+        font-size: 12px;
+    }
+
+    .servicio > i{
+    font-size: 17px;
+    }
+
+    .tarjeta-redireccion p{
+    font-size: 11px;
+    }
+
+    .detalles-app p{
+        font-size: 12px;
+    }
+
+    .descripcion-app {
+        font-size: 11px;
+    }
+
+    .seccion-app{
+        font-size: 12px;
+    }
+
+    .tecnologia{
+        font-size: 11px;
+        padding: 3px 6px;
+    }
+
+    .foto-miembro{
+    width: 15%;
+    }
+
+    #reseña-cliente i{
+        font-size: 36px;
+    }
+
+    #nombre-cliente{
+        font-size: 14px;
+    }
+
+    #cargo-cliente{
+        font-size: 14px;
+    }
+
+    #resultados-proyecto span{
+        font-size: 14px;
+    }
+    
+    #resultados-proyecto i{
+        font-size: 18px;
+    }
+
+    .contacto-info h2{
+        font-size: 24px;
+    }
+
+    .contacto-links a {
+        font-size: 12px;
+    }
+
+    .social-iconos a {
+        font-size: 16px;
+    }
+
+    .contacto-form input,
+    .contacto-form textarea {
+        font-size: 12px;
+    }
+
+    .form-servicios .label-servicios {
+        font-size: 13px;
+    }
+
+    /*otros elementos*/
+
+    #ofrecimientos #img-servicio {
+        align-self: center;
+        max-width: 90%;
+    }
+}
+
+/*Monitores grandes */
+@media (min-width: 1201px) {
+}
+
+
+
+
+    
