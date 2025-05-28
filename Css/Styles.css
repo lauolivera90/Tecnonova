@@ -234,14 +234,14 @@ button{
 /*footer*/
 
 #footer {
-  background-color: #2C3E50; /* color de fondo oscuro del footer */
+  background-color: #2C3E50;
   color: #f1f1f1;
   padding: 60px 40px 30px;
   margin-top: 16px;
   font-family: 'Inter', sans-serif;
 }
 
-.footer-container {
+.footer-contenedor {
     justify-items: center;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -250,13 +250,13 @@ button{
   margin: 0 auto;
 }
 
-.footer-brand h3 {
+.footer-marca h3 {
   font-size: 22px;
   margin-bottom: 10px;
   color: #F39C12;
 }
 
-.footer-brand p {
+.footer-marca p {
   font-size: 14px;
   color: #ccc;
   line-height: 1.6;
